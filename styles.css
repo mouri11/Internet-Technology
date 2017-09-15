@@ -3,7 +3,8 @@ body {
 }
 
 div {
-    width: 80%;
+    width: 70%;
+    margin: 0px auto;
     border-radius: 5px;
     background-color: #7bcce0;
     padding: 20px;
