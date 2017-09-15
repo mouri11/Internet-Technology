@@ -9,12 +9,12 @@
 <body>
 	<div class = "form-main">
 		<h1 style="text-align: center;">Order your free T-shirts...Exclusive for MAKAUT students!! Hurry!!</h1><br>
-		<form id="gform" action="mailto:rashik.nandalover@gmail.com" onsubmit="formSubmit()" method="POST">
+		<form id="gform" action="https://script.google.com/macros/s/AKfycbwCxsgx8uDMXHEmdoMcL24yMwTZpCuBRdiq1aM7C8OEO2IuAED3/exec" onsubmit="formSubmit()" method="POST">
 			<label for="fname">First Name</label>
-			<input type="text" id="fname" name="fname" pattern="[A-Z]^+[a-z]+" class="full-width" required>
+			<input type="text" id="fname" name="fname" pattern="[A-Za-z]+" class="full-width" required>
 			
 			<label for="lname">Last Name</label>
-			<input type="text" id="lname" name="lname" pattern="[A-Z]^+[a-z]+" class="full-width" required><br>
+			<input type="text" id="lname" name="lname" pattern="[A-Za-z]+" class="full-width" required><br>
 			<br>
 			<label for="gender">Gender</label><br>
 			<input type="radio" id="male" name="gender" value="male" checked>Male
@@ -50,5 +50,7 @@
 			<input type="reset" name="reset">
 		</form>
 	</div>
+
+	<script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 </body>
 </html>
