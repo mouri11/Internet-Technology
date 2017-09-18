@@ -31,11 +31,3 @@ function changeColor() {
 
 	document.getElementById('container').style.backgroundColor = colour
 }
-
-/*function validate() {
-	//alert("submit?")
-	var name = document.getElementById('name-inp')
-	if(name.value == null){
-		document.getElementById('name-inp').placeholder = 'You don\'t have a name?';
-	}
-}*/

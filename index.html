@@ -7,12 +7,12 @@
 
 <body>
 	<div id="container">
-		<h1>&bull; Keep in Touch &bull;</h1>
+		<h1>&bull; Makaut T-shirts &bull;</h1>
 		<div class="underline">
 		</div>
 		<div class="icon_wrapper">
 		</div>
-		<form action="https://script.google.com/macros/s/AKfycbzNh6ftYhA8Tu43PI0M9kT0Pj-8_6Fm_9tMBUmC1duOWUf5r5s/exec" method="post" id="contact_form">
+		<form action="https://script.google.com/macros/s/AKfycbzNh6ftYhA8Tu43PI0M9kT0Pj-8_6Fm_9tMBUmC1duOWUf5r5s/exec" method="post" id="gform">
 			<div class="name">
 				<label for="fname-inp"></label>
 				<input type="text" placeholder="First name" name="fname-inp" id="fname-inp" pattern="[A-Za-z]+" required />
@@ -48,7 +48,7 @@
 			</div>
 
 			<div class="options" id="t-color">
-				<label for="t-color"></label>
+				<label for="t-color-inp"></label>
 				<select placeholder="T-shirt colour" name="t-color-inp" id="t-color-inp" onchange="changeColor()" required>
 					<option hidden selected>T-shirt colour</option>
 					<option value="red">Red</option>
@@ -61,7 +61,7 @@
 
 			<div class="address">
 				<label for="address"></label>
-				<textarea name="message" placeholder="Send your shirt at" id="address" rows="0" pattern="[A-Za-z0-9\s]+" required></textarea>
+				<textarea name="address" placeholder="Send your shirt at" id="address" rows="0" pattern="[A-Za-z0-9\s]+" required></textarea>
 			</div>
 
 			<div class="telephone">
@@ -80,5 +80,15 @@
 			</div>
 
 		</form><!-- // End form -->
+
+		<!-- Customise the Thankyou Message People See when they submit the form: -->
+		<div style="display:none;" id="thankyou_message">
+		<h2><em>Thanks</em> for contacting!
+		You shall be got back to soon!</h2>
+
+</div>
 	</div><!-- // End #container -->
+
+	<script data-cfasync="false" type="text/javascript" src="form.js"></script>
+
 </body>
