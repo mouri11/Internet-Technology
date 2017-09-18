@@ -1,56 +1,84 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset=utf-8 />
-	<title>Free T-Shirts for MAKAUT</title>
-	<link rel="stylesheet" type="text/css" href="styles.css" />
-	<script type="text/javascript" src="form-submit.js"></script>
-</head>
-<body>
-	<div class = "form-main">
-		<h1 style="text-align: center;">Order your free T-shirts...Exclusive for MAKAUT students!! Hurry!!</h1><br>
-		<form id="gform" action="https://script.google.com/macros/s/AKfycbwCxsgx8uDMXHEmdoMcL24yMwTZpCuBRdiq1aM7C8OEO2IuAED3/exec" onsubmit="formSubmit()" method="POST">
-			<label for="fname">First Name</label>
-			<input type="text" id="fname" name="fname" pattern="[A-Za-z]+" class="full-width" required>
-			
-			<label for="lname">Last Name</label>
-			<input type="text" id="lname" name="lname" pattern="[A-Za-z]+" class="full-width" required><br>
-			<br>
-			<label for="gender">Gender</label><br>
-			<input type="radio" id="male" name="gender" value="male" checked>Male
-			<input type="radio" id="female" name="gender">Female<br>
-			<br>
-			<label for="tsize">T-Shirt Size</label><br>
-			<select>
-				<option value="small">Small</option>
-				<option value="medium">Medium</option>
-				<option value="large">Large</option>
-				<option value="xlarge">Extra Large</option>
-			</select><br>
-			<br>
-			<label for="tcolor">T-Shirt Colour</label><br>
-			<select>
-				<option value="red">Red</option>
-				<option value="green">Green</option>
-				<option value="yellow">Yellow</option>
-				<option value="black">Black</option>
-				<option value="white">White</option>
-			</select><br>
-			<br>
-			<label for="address">Address</label><br>
-			<textarea name="address" id="address" cols="30" rows="10" class="full-width" required></textarea><br>
-			<br>
-			<label for="email">Email Address</label>
-			<input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="full-width" required><br>
-			<br>
-			<label for="phone">Phone</label>
-			<input type="text" id="phone" name="phone" maxlength="10" pattern="\d{10}" class="full-width" required><br>
-			<br>
-			<input type="submit" name="submit">
-			<input type="reset" name="reset">
-		</form>
-	</div>
+<!doctype html>
 
-	<script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+	<div id="container">
+		<h1>&bull; Keep in Touch &bull;</h1>
+		<div class="underline">
+		</div>
+		<div class="icon_wrapper">
+		</div>
+		<form action="https://script.google.com/macros/s/AKfycbzNh6ftYhA8Tu43PI0M9kT0Pj-8_6Fm_9tMBUmC1duOWUf5r5s/exec" method="post" id="contact_form">
+			<div class="name">
+				<label for="fname-inp"></label>
+				<input type="text" placeholder="First name" name="fname-inp" id="fname-inp" pattern="[A-Za-z]+" required />
+			</div>
+
+			<div class="name" style="float:right;">
+				<label for="mname-inp"></label>
+				<input type="text" placeholder="Middle name" name="mname-inp" id="mname-inp" pattern="[A-Za-z]+" />
+			</div>
+
+			<div class="name">
+				<label for="lname-inp"></label>
+				<input type="text" placeholder="Last name" name="lname-inp" id="lname-inp" pattern="[A-Za-z]+" required>
+			</div>
+			
+			<div class="options" id="gender">
+				<label for="gender"></label>
+				<select name="gender-inp" id="gender-inp">
+					<option value="male" selected>Male</option>
+					<option value="female">Female</option>
+					<option value="others">Others</option>
+				</select>
+			</div>
+
+			<div class="options" id="t-size">
+				<label for="t-size"></label>
+				<select placeholder="My size" name="t-size-inp" id="t-size-inp">
+					<option value="small" selected="">Small</option>
+					<option value="medium">Medium</option>
+					<option value="large">Large</option>
+					<option value="xlarge">Extra-large</option>
+				</select>
+			</div>
+
+			<div class="options" id="t-color">
+				<label for="t-color"></label>
+				<select placeholder="T-shirt colour" name="t-color-inp" id="t-color-inp" onchange="changeColor()" required>
+					<option hidden selected>T-shirt colour</option>
+					<option value="red">Red</option>
+					<option value="green">Green</option>
+					<option value="yellow">Yellow</option>
+					<option value="black">Black</option>
+					<option value="white">White</option>
+				</select>
+			</div>
+
+			<div class="address">
+				<label for="address"></label>
+				<textarea name="message" placeholder="Send your shirt at" id="address" rows="0" pattern="[A-Za-z0-9\s]+" required></textarea>
+			</div>
+
+			<div class="telephone">
+				<label for="name"></label>
+				<input type="text" placeholder="We will call you" name="telephone" id="telephone" required>
+			</div>
+
+			<div class="email">
+				<label for="email"></label>
+				<input type="email" placeholder="Your email" name="email" id="email" required>
+			</div>
+
+			<div class="submit">
+				<input type="submit" value="Submit" id="form_button" />
+				<input type="reset" value="Reset" id="form_button" style="float:right;"/>
+			</div>
+
+		</form><!-- // End form -->
+	</div><!-- // End #container -->
 </body>
-</html>
