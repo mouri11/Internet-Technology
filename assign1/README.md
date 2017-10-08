@@ -11,3 +11,6 @@
 ### Phone No - size 10 (basic phone validation)
 ### Put Submit Button & Reset button
 ## On submission - a mail will be triggered to one of your friends and a pop-up will arrive - thanking the user, along with some other relevant information
+
+## Link to the form
+https://mouri11.github.io/Internet-Technology/assign1/index.html
