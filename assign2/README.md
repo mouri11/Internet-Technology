@@ -11,3 +11,9 @@
 * 9. Play sound using Applet
 * 10. Read a file using Applet
 * 11. Write to a file using Applet
+
+## To run an applet, open containing folder, then run
+```
+$ javac Filename.java
+$ appletviewer file.html
+```
