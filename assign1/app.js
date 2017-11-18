@@ -2,8 +2,6 @@ function changeColor() {
 	var e = document.getElementById('t-color-inp');
 	var color = e.options[e.selectedIndex].value;
 	var colour = "#d37070"
-	//alert(color);
-	//document.getElementById('container').style.backgroundColor = 'blue'
 	switch(color) {
 		case 'red':
 			colour = "#d37070";
@@ -26,7 +24,7 @@ function changeColor() {
 			break;
 
 		default:
-			colour = "";
+			colour = "#ffffff";
 	}
 
 	document.getElementById('container').style.backgroundColor = colour
