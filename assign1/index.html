@@ -37,7 +37,7 @@
 				</select>
 			</div>
 
-			<div class="options" id="t-size">
+			<div class="name" id="t-size">
 				<label for="t-size"></label>
 				<select placeholder="My size" name="t-size-inp" id="t-size-inp">
 					<option value="small" selected="">Small</option>
@@ -66,12 +66,12 @@
 
 			<div class="telephone">
 				<label for="name"></label>
-				<input type="text" placeholder="We will call you" name="telephone" id="telephone" required>
+				<input type="text" placeholder="We will call you" name="telephone" id="telephone" pattern="[0-9]+" required>
 			</div>
 
 			<div class="email">
 				<label for="email"></label>
-				<input type="email" placeholder="Your email" name="email" id="email" required>
+				<input type="email" placeholder="Your email" name="email" id="email" patter="[(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])]" required>
 			</div>
 
 			<div class="submit">
