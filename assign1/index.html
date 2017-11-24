@@ -1,9 +1,9 @@
 <!doctype html>
-
+<!-- index.html -->
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="app.js"> </script>
 </head>
 
 <body>
@@ -15,22 +15,22 @@
 		</div>
 		<form action="https://script.google.com/macros/s/AKfycbzNh6ftYhA8Tu43PI0M9kT0Pj-8_6Fm_9tMBUmC1duOWUf5r5s/exec" method="post" id="gform">
 			<div class="name">
-				<label for="fname-inp"></label>
+				<label for="fname-inp"> </label>
 				<input type="text" placeholder="First name" name="fname-inp" id="fname-inp" pattern="[A-Za-z]+" required />
 			</div>
 
 			<div class="name" style="float:right;">
-				<label for="mname-inp"></label>
+				<label for="mname-inp"> </label>
 				<input type="text" placeholder="Middle name" name="mname-inp" id="mname-inp" pattern="[A-Za-z]+" />
 			</div>
 
 			<div class="name">
-				<label for="lname-inp"></label>
+				<label for="lname-inp"> </label>
 				<input type="text" placeholder="Last name" name="lname-inp" id="lname-inp" pattern="[A-Za-z]+" required>
 			</div>
 			
 			<div class="options" id="gender">
-				<label for="gender"></label>
+				<label for="gender"> </label>
 				<select name="gender-inp" id="gender-inp">
 					<option value="male" selected>Male</option>
 					<option value="female">Female</option>
@@ -39,7 +39,7 @@
 			</div>
 
 			<div class="name" id="t-size">
-				<label for="t-size"></label>
+				<label for="t-size"> </label>
 				<select placeholder="My size" name="t-size-inp" id="t-size-inp">
 					<option value="small" selected="">Small</option>
 					<option value="medium">Medium</option>
@@ -49,7 +49,7 @@
 			</div>
 
 			<div class="options" id="t-color">
-				<label for="t-color-inp"></label>
+				<label for="t-color-inp"> </label>
 				<select placeholder="T-shirt colour" name="t-color-inp" id="t-color-inp" onchange="changeColor()" required>
 					<option hidden selected>T-shirt colour</option>
 					<option value="red">Red</option>
@@ -61,17 +61,17 @@
 			</div>
 
 			<div class="address">
-				<label for="address"></label>
-				<textarea name="address" placeholder="Send your shirt at" id="address" rows="0" pattern="[A-Za-z0-9\s]+" required></textarea>
+				<label for="address"> </label>
+				<textarea name="address" placeholder="Send your shirt at" id="address" rows="0" pattern="[A-Za-z0-9\s]+" required> </textarea>
 			</div>
 
 			<div class="telephone">
-				<label for="name"></label>
+				<label for="name"> </label>
 				<input type="text" placeholder="We will call you" name="telephone" id="telephone" pattern="[0-9]+" required>
 			</div>
 
 			<div class="email">
-				<label for="email"></label>
+				<label for="email"> </label>
 				<input type="email" placeholder="Your email" name="email" id="email" patter="[(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])]" required>
 			</div>
 
@@ -84,12 +84,11 @@
 
 		<!-- Customise the Thankyou Message People See when they submit the form: -->
 		<div style="display:none;" id="thankyou_message">
-		<h2><em>Thanks</em> for contacting!
-		You shall be got back to soon!</h2>
-
-</div>
+			<h2><em>Thanks</em> for contacting!
+			You shall be got back to soon!</h2>
+		</div>
 	</div><!-- // End #container -->
 
-	<script data-cfasync="false" type="text/javascript" src="form.js"></script>
+	<script data-cfasync="false" type="text/javascript" src="form.js"> </script>
 
 </body>
