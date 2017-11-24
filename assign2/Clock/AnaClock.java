@@ -1,3 +1,4 @@
+//AnaClock.java
 import java.awt.*;
 import java.applet.*;
 import java.util.*;
@@ -5,39 +6,28 @@ import java.text.*;
 
 public class AnaClock extends Applet implements Runnable
 {
-	int width, height;
-	int h = 0, min = 0, s = 0;
-	Thread t = null;
-	boolean tSuspend;
-	String time="";
+	int width, height;	int h = 0, min = 0, s = 0;
+	Thread t = null;	boolean tSuspend;	String time="";
 
 	public void init () {
-		width = getSize().width;
-		height = getSize().height;
-		setBackground(Color.black);
-		setFont(new Font("Courier",Font.BOLD,15));
+		width = getSize().width;	height = getSize().height;
+		setBackground(Color.black);	setFont(new Font("Courier",Font.BOLD,15));
 	}
 
 	public void start () {
 		if (t == null) {
-			t = new Thread(this);
-			t.setPriority(Thread.MIN_PRIORITY);
-			tSuspend = false;
-			t.start();
+			t = new Thread(this);	t.setPriority(Thread.MIN_PRIORITY);
+			tSuspend = false;	t.start();
 		}
 		else {
 			if (tSuspend) {
 				tSuspend = false;
-				synchronized(this){
-					notify();
-				}
+				synchronized(this){	notify();	}
 			}
 		}
 	}
 
-	public void stop () {
-		tSuspend = true;
-	}
+	public void stop () {	tSuspend = true;	}
 
 	public void run () {
 		try {
@@ -56,9 +46,7 @@ public class AnaClock extends Applet implements Runnable
 				//thread checks to see if it should suspend itself
 				if (tSuspend) {
 					synchronized(this){
-						while (tSuspend) {
-							wait();
-						}
+						while (tSuspend) {	wait();	}
 					}
 				}
 				repaint();

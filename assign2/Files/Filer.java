@@ -1,3 +1,4 @@
+// Filer.java
 import java.applet.*;
 import java.awt.*;
 import java.io.*;
@@ -5,25 +6,18 @@ import java.net.*;
 
 public class Filer extends Applet 
 {
-   String fileToRead = "test1.txt";
-   StringBuffer strBuff;
+   String fileToRead = "test1.txt";   StringBuffer strBuff;
    TextArea txtArea;
 
    public void init() {
-      txtArea = new TextArea(100, 100);
-      txtArea.setEditable(false);
-      add(txtArea, "center");
-      String prHtml = this.getParameter("fileToRead");
+      txtArea = new TextArea(100, 100);   txtArea.setEditable(false);
+      add(txtArea, "center");   String prHtml = this.getParameter("fileToRead");
       
-      if (prHtml != null) fileToRead = new String(prHtml);  
-      readFile();
+      if (prHtml != null) fileToRead = new String(prHtml);     readFile();
    }
    public void readFile(){
-      String line;
-      URL url = null;
-      try {
-         url = new URL(getCodeBase(), fileToRead);
-      }
+      String line;   URL url = null;
+      try {   url = new URL(getCodeBase(), fileToRead); }
       catch(MalformedURLException e){}
       try {
          InputStream in = url.openStream();
